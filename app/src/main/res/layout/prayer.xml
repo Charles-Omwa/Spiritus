@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.spiritus.RequestActivity"
+    android:layout_margin="15dp">
+
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Title"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/editTextFirstName"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/editTextLastName"
+        android:layout_below="@+id/editTextFirstName"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:maxLines="20"
+        android:ems="10"
+        android:id="@+id/editTextEmail"
+        android:layout_below="@+id/editTextLastName"
+        android:hint="description"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Prayer Request"
+        android:id="@+id/ButtonInsert"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
