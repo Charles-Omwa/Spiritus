@@ -2,51 +2,104 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
     android:layout_height="match_parent"
-    tools:context="com.example.spiritus.RequestActivity"
-    android:layout_margin="15dp">
+    tools:context="com.example.spiritus.RequestActivity">
 
 
 
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Title"
-        android:gravity="center"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:textColorHint="@color/black"
         android:ems="10"
+        android:background="@drawable/textviewshape"
+
+        android:inputType="textPersonName"
+        android:hint="Prayer Title"
         android:id="@+id/editTextFirstName"
-        android:layout_marginTop="30dp"
+
         />
 
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Name"
-        android:gravity="center"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColorHint="@color/black"
         android:ems="10"
+        android:background="@drawable/textviewshape"
+        android:inputType="textPersonName"
+        android:hint="Your Name"
         android:id="@+id/editTextLastName"
         android:layout_below="@+id/editTextFirstName"
         />
 
     <EditText
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:maxLines="20"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+
         android:ems="10"
+        android:background="@drawable/textviewshape"
+        android:inputType="textMultiLine"
+        android:lines="5"
         android:id="@+id/editTextEmail"
         android:layout_below="@+id/editTextLastName"
-        android:hint="description"
+        android:hint="Description"
+        android:textColorHint="@color/black"
         android:gravity="center"/>
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Send Prayer Request"
-        android:id="@+id/ButtonInsert"
         android:layout_below="@+id/editTextEmail"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/ButtonInsert"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:text="Send Prayer Request"
+        android:textColor="@color/yellow"
+        android:background="@drawable/round_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+    <ImageView
+        android:id="@+id/imageTop"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/prayer" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:text="PRAYER REQUEST"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageTop"
+        android:textColor="@color/yellow"
+        android:textSize="18dp" />
+
 
 </RelativeLayout>

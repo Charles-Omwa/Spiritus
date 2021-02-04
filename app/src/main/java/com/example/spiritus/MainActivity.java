@@ -5,7 +5,9 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.controls.actions.FloatAction;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent a = new Intent(getApplicationContext(),RequestActivity.class);
+                startActivity(a);
+
+            }
+        });
+
+        final Button button = (Button) findViewById(R.id.btn_facebook);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent a = new Intent(getApplicationContext(),ShowWebView.class);
                 startActivity(a);
 
             }

@@ -22,7 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
-import android.widget.Toast;
+
 import com.android.volley.RequestQueue;
 
 public class DevotionActivity extends AppCompatActivity {
@@ -189,9 +189,29 @@ public class DevotionActivity extends AppCompatActivity {
                 )));
 
     }
+    public  void  Share (View view  ) {
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT,getIntent().getStringExtra("description") );
+        sendIntent.setType("text/plain");
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(sendIntent);
+
+    }
+
+
     public void Donate(View view) {
         Intent a = new Intent(getApplicationContext(),Donation.class);
         startActivity(a);
         //Toast.makeText(this, "Donated", Toast.LENGTH_LONG).show();
     }
+
+    public void History(View view) {
+        Intent a = new Intent(getApplicationContext(), HistoryActivity.class);
+        startActivity(a);
+        //Toast.makeText(this, "Donated", Toast.LENGTH_LONG).show();
+    }
 }
+
+

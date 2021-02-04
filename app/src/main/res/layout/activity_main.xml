@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
-    android:background="#FCFCFC">
+    android:background="@color/black">
+
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -39,13 +41,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/bankcardId5"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="100dp"
+            app:cardCornerRadius="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:padding="0dp">
+            android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,17 +74,20 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:background="@color/yellow"
                     android:text="Daily Devotion"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="2dp"
-                    android:background="@color/lightgray" />
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:layout_margin="2dp"-->
+<!--                    android:background="@color/lightgray" />-->
 
 <!--                <TextView-->
 <!--                    android:layout_width="wrap_content"-->
@@ -94,10 +100,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/bankcardId4"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:padding="0dp">
@@ -111,7 +119,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
-                    android:background="@color/darkpurple"
+                    android:background="@color/yellow"
                     android:gravity="center">
 
                     <ImageView
@@ -122,17 +130,20 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
                     android:text="Prayer Request"
+                    android:textAlignment="center"
+                    android:background="@color/yellow"
                     android:textColor="#000"
+                    android:textStyle="bold"
                     android:textSize="18dp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="2dp"
-                    android:background="@color/lightgray" />
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:layout_margin="2dp"-->
+<!--                    android:background="@color/lightgray" />-->
 
 <!--                <TextView-->
 <!--                    android:layout_width="wrap_content"-->
@@ -143,5 +154,18 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_button"
+            android:text="Blog"
+            android:clickable="true"
+            android:textColor="@color/yellow"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="right"
+            android:id="@+id/btn_facebook"
+            android:textSize="12dp"
+            />
     </LinearLayout>
 </RelativeLayout>
