@@ -30,6 +30,7 @@ public class Donation extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Donation");
         setContentView(R.layout.donation);
         ButterKnife.bind(this);
         mButton.setOnClickListener(this);
