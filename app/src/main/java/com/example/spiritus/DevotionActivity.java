@@ -189,8 +189,10 @@ setTitle("Devotion");
                 )));
 
     }
-    public  void  Share (View view  ) {
-        String shareBody ="God's timing in our lives is perfect, and we will enjoy life much more if we believe that. He knows the exact right time to do the things we have requested of Him. Dont waste your time being upset about something that only God can change. If He withholds your desire for the time being, thank Him that He knows best. Time is a gift dont waste it being upset! Prayer Starter: Father God, please help me to trust Your timing in my life. Help me not to frustrate myself by trying to do what only You can do. In Jesus' name, Amen.";
+    public  void  Share (View view  ) throws JSONException {
+        JSONObject json = null;
+
+        String shareBody =(json.getString("description"));
         Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
 
         sendIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
